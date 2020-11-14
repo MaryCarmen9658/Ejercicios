@@ -12,38 +12,32 @@ public class main {
         valores();
         resultado();
         scanner.nextLine();
-
-
     }
+    	private static void resultado(){
+	        int  opcion =get_menu();
+	
+	        while(opcion != 5)
+	        {
+	            respuesta = calcular(opcion,cubo);
+	            System.out.println("El valor es " +respuesta+ "\n");
+	            opcion = get_menu();
+	        }
+	        valores();
+	        resultado();
+	    }
 
-
-    private static void resultado(){
-
-        int  opcion =get_menu();
-
-        while(opcion != 5)
-        {
-            respuesta = calcular(opcion,cubo);
-            System.out.println("El valor es " +respuesta+ "\n");
-            opcion = get_menu();
-        }
-        valores();
-        resultado();
-    }
-
-
-    private static void valores(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el valor del lado:\t");
-        try{
-            double lado  = Double.parseDouble( scanner.nextLine());
-            cubo = new Cubo(lado);
-        }
-        catch (NumberFormatException nfe){
-            System.out.println ("El valor debe de ser un entero");
-            valores();
-        }
-    }
+	    private static void valores(){
+	        Scanner scanner = new Scanner(System.in);
+	        System.out.print("Ingrese el valor del lado:\t");
+	        try{
+	            double lado  = Double.parseDouble( scanner.nextLine());
+	            cubo = new Cubo(lado);
+	        }
+	        catch (NumberFormatException nfe){
+	            System.out.println ("El valor debe de ser un entero");
+	            valores();
+	        }
+ }
 
 
     public static double calcular( int opt, Cubo cubo){
@@ -65,9 +59,9 @@ public class main {
         Scanner scanner = new Scanner(System.in);
         System.out.print ("Ingrese el calculo a realizar:\n");
         System.out.print ("1: Perímetro cuadrado \n");
-        System.out.print ("2: calcular área\n");
-        System.out.print ("3: calcular Volúmen\n");
-        System.out.print ("4: calcular Perímetro cubo\n");
+        System.out.print ("2: Calcular área\n");
+        System.out.print ("3: Calcular Volúmen\n");
+        System.out.print ("4: Calcular Perímetro cubo\n");
         System.out.print ("5: Reinicio \n");
         System.out.print ("6: Salir del programa \n");
 
