@@ -5,47 +5,35 @@ import java.util.Scanner;
 public class main {
 
 	static Cubo cubo;
-    static double current;
+    static double respuesta;
     public static void main(String[] args){
 
         Scanner scanner = new Scanner(System.in);
-
-
-        init ();
-
-
-        loop ();
-
-
+        valores();
+        resultado();
         scanner.nextLine();
 
 
     }
 
 
-    private static void loop(){
+    private static void resultado(){
 
-        int  opt =get_menu();
+        int  opcion =get_menu();
 
-        while(opt != 5)
+        while(opcion != 5)
         {
-            current = calculate(opt ,cubo);
-
-            System.out.println("El valor es " +current+ "\n");
-
-            opt = get_menu ();
+            respuesta = calcular(opcion,cubo);
+            System.out.println("El valor es " +respuesta+ "\n");
+            opcion = get_menu();
         }
-
-
-
-        init ();
-        loop ();
+        valores();
+        resultado();
     }
 
 
-    private static void init(){
+    private static void valores(){
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Ingrese el valor del lado:\t");
         try{
             double lado  = Double.parseDouble( scanner.nextLine());
@@ -53,24 +41,21 @@ public class main {
         }
         catch (NumberFormatException nfe){
             System.out.println ("El valor debe de ser un entero");
-            init ();
+            valores();
         }
-
-
-
     }
 
 
-    public static double calculate( int opt, Cubo cubo){
+    public static double calcular( int opt, Cubo cubo){
 
         double result = 0;
         switch (opt){
-            case 1: result =cubo.calculatePerimeter(true); break;
-            case 2: result = cubo.calculateArea (); break;
-            case 3: result = cubo.calculateVolume(); break;
-            case 4: result = cubo.calculatePerimeter(false); break;
-            case 5: init();break;
-            case 6: System.out.println ("Gracias por su visita vuelva pronto");System.exit (0);break;
+            case 1: result =cubo.calcularPerimetro(true); break;
+            case 2: result = cubo.calcularArea (); break;
+            case 3: result = cubo.calcularVolumen(); break;
+            case 4: result = cubo.calcularPerimetro(false); break;
+            case 5: valores();break;
+            case 6: System.out.println ("Se salió del programa");System.exit (0);break;
 
         }
         return result;

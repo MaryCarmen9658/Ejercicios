@@ -10,11 +10,11 @@ public class Cuadrado {
 
 
 
-    public  double calculateArea(){
+    public  double calcularArea(){
         return this.x * this.x;
     }
 
-    public  double calculatePerimeter()
+    public  double calcularPerimetro()
     {
         return this.x *4;
     }
