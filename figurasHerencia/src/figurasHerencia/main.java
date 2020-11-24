@@ -44,12 +44,18 @@ public class main {
 
         double result = 0;
         switch (opt){
-            case 1: result =cubo.calcularPerimetro(true); break;
-            case 2: result = cubo.calcularArea (); break;
-            case 3: result = cubo.calcularVolumen(); break;
-            case 4: result = cubo.calcularPerimetro(false); break;
-            case 5: valores();break;
-            case 6: System.out.println ("Se salió del programa");System.exit (0);break;
+            case 1: result =cubo.calcularPerimetro(true); 
+            break;
+            case 2: result = cubo.calcularArea (); 
+            break;
+            case 3: result = cubo.calcularVolumen(); 
+            break;
+            case 4: result = cubo.calcularPerimetro(false); 
+            break;
+            case 5: valores();
+            break;
+            case 6: System.out.println ("Salió del programa");System.exit (0);
+            break;
 
         }
         return result;
