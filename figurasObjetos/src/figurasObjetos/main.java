@@ -1,4 +1,4 @@
-package figurasHerencia;
+package figurasObjetos;
 
 import java.util.Scanner;
 
