@@ -1,17 +1,17 @@
 package figurasHerencia;
 
 public class Cubo extends Cuadrado{
-	public double x;
+	public double l;
 
     public Cubo(double lado) {
         super(lado);
 
-        this.x = lado;
+        this.l = lado;
     }
 
 
     public  double calcularVolumen(){
-        return Math.pow(this.x,3);
+        return Math.pow(this.l,3);
     }
 
 
@@ -22,7 +22,7 @@ public class Cubo extends Cuadrado{
            return super.calcularPerimetro();
         }
         else{
-            return this.x*12;
+            return this.l*12;
         }
 
 

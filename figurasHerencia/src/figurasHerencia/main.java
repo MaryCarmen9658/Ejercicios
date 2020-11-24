@@ -57,12 +57,12 @@ public class main {
 
     public static int get_menu(){
         Scanner scanner = new Scanner(System.in);
-        System.out.print ("Ingrese el calculo a realizar:\n");
-        System.out.print ("1: Perímetro cuadrado \n");
+        System.out.print ("Elija un opción:\n");
+        System.out.print ("1: Calcular perímetro cuadrado \n");
         System.out.print ("2: Calcular área\n");
-        System.out.print ("3: Calcular Volúmen\n");
-        System.out.print ("4: Calcular Perímetro cubo\n");
-        System.out.print ("5: Reinicio \n");
+        System.out.print ("3: Calcular Perímetro cubo\n");
+        System.out.print ("4: Calcular Volúmen\n");
+        System.out.print ("5: Reiniciar \n");
         System.out.print ("6: Salir del programa \n");
 
         int opt  = Integer.parseInt( scanner.nextLine());

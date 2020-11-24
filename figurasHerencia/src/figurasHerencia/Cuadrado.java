@@ -1,21 +1,21 @@
 package figurasHerencia;
 
 public class Cuadrado {
-	public double x;
+	public double l;
 
     public  Cuadrado(double lado) {
-        this.x =  lado;
+        this.l =  lado;
     }
 
 
 
 
     public  double calcularArea(){
-        return this.x * this.x;
+        return this.l * this.l;
     }
 
     public  double calcularPerimetro()
     {
-        return this.x *4;
+        return this.l *4;
     }
 }
